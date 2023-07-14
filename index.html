@@ -19,63 +19,21 @@
       This will be a web app featuring an initiative tracker, effect tracker,
       engagement graph, and other small utilities for DMs to run combat easier.
     </p>
-    <table>
+
+    <button onclick="addRow('21', 'Rogue Randy', '48', 'Invisible', '-')">
+      Click to add Randy
+    </button>
+
+    <table id="initiativeTable">
       <tr>
-        <th style="width: 10%">Initiative Count</th>
-        <th style="width: 20%">Creature</th>
-        <th style="width: 10%">HP</th>
-        <th style="width: 30%">Effects</th>
-        <th style="width: 30%">Engagements</th>
-      </tr>
-      <tr>
-        <td>21</td>
-        <td>Rogue Randy</td>
-        <td>48/48</td>
-        <td>Invisible</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>17</td>
-        <td>Hobgoblin Warlord</td>
-        <td>73/97</td>
-        <td>Paralyzed</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td>Fighter Philly</td>
-        <td>59/72</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>15</td>
-        <td>Goblin 1</td>
-        <td>7/7</td>
-        <td>Prone</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>14</td>
-        <td>Cleric Callie</td>
-        <td>56/56</td>
-        <td>Concentrating (Hold Person on Hobgoblin Warlord, 10/10 rounds)</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>8</td>
-        <td>Goblin 2</td>
-        <td>0/7</td>
-        <td>-</td>
-        <td>-</td>
-      </tr>
-      <tr>
-        <td>5</td>
-        <td>Wizard Willy</td>
-        <td>32/32</td>
-        <td>Concentrating (Invisibility on Randy, 9/10 rounds)</td>
-        <td>-</td>
+        <th><b>Initiative Count</b></th>
+        <th><b>Creature</b></th>
+        <th><b>HP</b></th>
+        <th><b>Effects</b></th>
+        <th><b>Engagements</b></th>
       </tr>
     </table>
+
+    <script src="index.js"></script>
   </body>
 </html>
