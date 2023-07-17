@@ -1,10 +1,21 @@
 const table = document.getElementById("initiativeTable");
+const initiativeCountInput = document.getElementById("initiativeCount");
+const creatureNameInput = document.getElementById("creatureName");
+const healthInput = document.getElementById("health");
+const effectsInput = document.getElementById("effects");
 
-function addRow(initiativeCount, creatureName, health, effects, engagements) {
+function addRow() {
     let newRow = table.insertRow(-1);
-    newRow.insertCell(0).innerHTML = initiativeCount;
-    newRow.insertCell(1).innerHTML = creatureName;
-    newRow.insertCell(2).innerHTML = health;
-    newRow.insertCell(3).innerHTML = effects;
-    newRow.insertCell(4).innerHTML = engagements;
+    newRow.insertCell(0).innerHTML = initiativeCountInput.value;
+    newRow.insertCell(1).innerHTML = creatureNameInput.value;
+    newRow.insertCell(2).innerHTML = healthInput.value;
+    newRow.insertCell(3).innerHTML = effectsInput.value;
+    newRow.insertCell(4).innerHTML = "-";
+}
+
+function clearInputs() {
+    initiativeCountInput.value = "";
+    creatureNameInput.value = "";
+    healthInput.value = "";
+    effectsInput.value = "";
 }
