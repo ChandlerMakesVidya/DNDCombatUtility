@@ -1,4 +1,5 @@
 const table = document.getElementById("initiativeTable");
+const inputForm = document.getElementById("inputForm");
 const initiativeCountInput = document.getElementById("initiativeCount");
 const creatureNameInput = document.getElementById("creatureName");
 const healthInput = document.getElementById("health");
@@ -14,8 +15,5 @@ function addRow() {
 }
 
 function clearInputs() {
-    initiativeCountInput.value = "";
-    creatureNameInput.value = "";
-    healthInput.value = "";
-    effectsInput.value = "";
+    inputForm.reset();
 }
