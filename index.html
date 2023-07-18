@@ -21,15 +21,17 @@
     </p>
 
     <div id="input">
-      <form id="inputForm" onsubmit="addRow(); clearInputs(); sortTable();">
+      <form id="inputForm" onsubmit="addRow();">
         <label for="initiativeCount">Initative Count</label>
         <input type="text" name="initiativeCount" id="initiativeCount" />
+        <label>(must be a number)</label>
         <br />
         <label for="creatureName">Creature Name</label>
         <input type="text" name="health" id="creatureName" />
         <br />
         <label for="health">HP</label>
         <input type="text" name="health" id="health" />
+        <label>(must be a number)</label>
         <br />
         <label for="effects">Effects</label>
         <input type="text" name="effects" id="effects" />
@@ -38,6 +40,8 @@
         <label for="">or press Enter.</label>
       </form>
     </div>
+
+    <p id="inputErrorMessage">There was an error in your inputs!</p>
 
     <div id="initiativeTracker">
       &nbsp;

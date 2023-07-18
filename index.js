@@ -4,23 +4,29 @@ const initiativeCountInput = document.getElementById("initiativeCount");
 const creatureNameInput = document.getElementById("creatureName");
 const healthInput = document.getElementById("health");
 const effectsInput = document.getElementById("effects");
+const inputErrorMessage = document.getElementById("inputErrorMessage");
 
 $("#inputForm").submit(function(e) {
     e.preventDefault();
 });
 
 function addRow() {
+    inputErrorMessage.style.opacity = 0;
+    if(isNaN(Number(initiativeCountInput.value)) || isNaN(Number(healthInput.value))){
+        inputErrorMessage.style.opacity = 1;
+        return;
+    }
+
     let newRow = table.insertRow(-1);
     newRow.insertCell(0).innerHTML = initiativeCountInput.value;
     newRow.insertCell(1).innerHTML = creatureNameInput.value;
     newRow.insertCell(2).innerHTML = healthInput.value;
     newRow.insertCell(3).innerHTML = effectsInput.value;
     newRow.insertCell(4).innerHTML = "-";
-}
 
-function clearInputs() {
     inputForm.reset();
     initiativeCountInput.focus();
+    sortTable();
 }
 
 function sortTable() {
@@ -32,9 +38,9 @@ function sortTable() {
         console.log(rows);
         for(i = 1; i < (rows.length - 1); i++) {
             shouldSwitch = false;
-            x = rows[i].getElementsByTagName("td")[0];
-            y = rows[i+1].getElementsByTagName("td")[0];
-            if(x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+            x = Number(rows[i].getElementsByTagName("td")[0].innerHTML);
+            y = Number(rows[i+1].getElementsByTagName("td")[0].innerHTML);
+            if(x < y) {
                 shouldSwitch = true;
                 break;
             }
