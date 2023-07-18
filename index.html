@@ -21,7 +21,7 @@
     </p>
 
     <div id="input">
-      <form id="inputForm" onsubmit="addRow(); clearInputs(); return false">
+      <form id="inputForm" onsubmit="addRow(); clearInputs(); sortTable();">
         <label for="initiativeCount">Initative Count</label>
         <input type="text" name="initiativeCount" id="initiativeCount" />
         <br />
@@ -35,6 +35,7 @@
         <input type="text" name="effects" id="effects" />
         <br />
         <input type="submit" value="Add to table" />
+        <label for="">or press Enter.</label>
       </form>
     </div>
 
@@ -51,6 +52,7 @@
       </table>
     </div>
 
+    <script src="node_modules/jquery/dist/jquery.js"></script>
     <script src="index.js"></script>
   </body>
 </html>
