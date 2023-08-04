@@ -17,7 +17,7 @@ function addRow() {
   if (
     isNaN(Number(initiativeCountInput.value)) ||
     isNaN(Number(healthInput.value)) ||
-    initiativeCountInput.innerHTML === ""
+    !initiativeCountInput.value
   ) {
     inputErrorMessage.style.opacity = 1;
     return;
