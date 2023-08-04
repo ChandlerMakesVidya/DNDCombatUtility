@@ -1,4 +1,16 @@
-table, th, td {
+body {
+  background-color: #371d10;
+}
+
+input {
+  background-color: black;
+  border-radius: 10px;
+  border-color: #362511;
+}
+
+table,
+th,
+td {
   border: 1px solid black;
   border-collapse: collapse;
 }
@@ -6,4 +18,8 @@ table, th, td {
 #inputErrorMessage {
   color: red;
   opacity: 0;
+}
+
+* {
+  color: antiquewhite;
 }
